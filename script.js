@@ -4,7 +4,7 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault()
     let imageToBeSearched=input.value
     let fetchData=async ()=>{
-        let data= await fetch(`https://api.unsplash.com/search/photos?page=1&query=${imageToBeSearched}&client_id=UljxNEpDDjLiI1X7a31c7wXpZ3aPQGDY_lsDD7K2HEc`)
+        let data= await fetch(`https://api.unsplash.com/search/photos?page=1&query=${imageToBeSearched}&client_id={your API KEY}`)
         let TempData=await data.json()
         let FinalData=TempData.results
         let image_container=document.getElementById('image_container')
